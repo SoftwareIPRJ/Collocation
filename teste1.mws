@@ -1,0 +1,30 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "p_til := (x, t) ->zeta * exp
+(2 * Pi * I * x / lambda + omega * t);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#>%&p_tilGf*6$%\"xG%\"tG6\"6$%)operatorG%&arrowGF)*&%%zetaG\"\"\"
+-%$expG6#,&**^#\"\"#F/%#PiGF/9$F/%'lambdaG!\"\"F/*&%&omegaGF/9%F/F/F/F
+)F)F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 106 "eqn := diff(p_til(x,t), t) - (1-k) * K_2 * diff(p_til(x,t), x$2
+)+ (1-k) * k * K_4 * diff(p_til(x,t), x$4);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%$eqnG,(*(%%zetaG\"\"\"%&omegaGF(-%$expG6#,&**^#\"\"#F
+(%#PiGF(%\"xGF(%'lambdaG!\"\"F(*&F)F(%\"tGF(F(F(F(*0\"\"%F(,&F(F(%\"kG
+F4F(%$K_2GF(F'F(F1F0F3!\"#F*F(F(*2\"#;F(F9F(F:F(%$K_4GF(F'F(F1F8F3!\"%
+F*F(F(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 81 "collect(simplify (eqn/(zeta*exp((2*I*Pi*x
++omega*t*lambda)/lambda))), [K_2, K_4]);" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#,(*(,&*(\"\"%\"\"\")%#PiG\"\"#F()%'lambdaGF+F(!\"\"**F'F(F)F(F,F
+(%\"kGF(F(F(F-!\"%%$K_2GF(F.*(,&*(\"#;F(F0F()F*F'F(F.*(F6F()F0F+F(F7F(
+F(F(F-F1%$K_4GF(F.%&omegaGF(" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}}{MARK "10 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }
+{PAGENUMBERS 0 1 2 33 1 1 }

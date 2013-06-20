@@ -1,0 +1,58 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 12 1 {CSTYLE "" -1 
+-1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }1 3 0 0 0 0 1 0 1 0 2 2 
+0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "phi := (x, t) ->exp(sigma_m \+
+* t) * exp(-I * x / lambda):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "phi_P  := phi(x_P,
+ t + dt):           phi_P_0  := phi(x_P, t):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 67 "phi_E  := phi(x_P + dx, t + dt):      phi_E_0  :
+= phi(x_P + dx, t):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "phi_
+W  := phi(x_P - dx, t + dt):      phi_W_0  := phi(x_P - dx, t):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 51 "#  Analise de estabilidade para os volumes internos
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "A_P :=  dx / dt:" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "A_E :=  mu / dx :" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "A_W := A_E:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "S_P := phi_P_0 (dx / dt - A_E - A_W):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "Termo := (A_E * phi_E + A_W * phi_W + S_P) / A_P;" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%&TermoG*(,(**%#muG\"\"\"%#dxG!\"\"-%
+$expG6#*&%(sigma_mGF),&%\"tGF)%#dtGF)F)F)-F-6#*(^#F+F),&%$x_PGF)F*F)F)
+%'lambdaGF+F)F)**F(F)F*F+F,F)-F-6#*(F7F),&F9F)F*F+F)F:F+F)F)*&--F-6#*&
+F0F)F2F)6#,&*&F*F)F3F+F)*(\"\"#F)F(F)F*F+F+F)--F-6#*(F7F)F9F)F:F+FEF)F
+)F)F*F+F3F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 87 "A :=  collect(simplify(Termo / exp(-I * x_P / lambda \+
+/ exp(sigma_m * t) )), [dt, dx]);;" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#
+>%\"AG*&,&**-%$expG6#**%$x_PG\"\"\"%'lambdaG!\"\"-F)6#,$*&%(sigma_mGF-
+%\"tGF-F/F-^#F-F-F---F)6#F36#,$*(,&*$)%#dxG\"\"#F-F/*(FAF-%#muGF-%#dtG
+F-F-F-FDF/F@F/F/F---F)6#*(^#F/F-F,F-F.F/F:F-F@F/F-*&,&*&FCF--F)6#*&,,*
+(F,F-F0F-F6F-F-*(F4F-F.F-F5F-F-*(F4F-F.F-FDF-F-*&FIF-F,F-F-*&FIF-F@F-F
+-F-F.F/F-F-*&FCF--F)6#*&,,FQF-FRF-FSF-FTF-*&F@F-F6F-F-F-F.F/F-F-F-F@!
+\"#F-F-FDF-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "Auxi :=
+ collect(simplify (A * A), [ dt]);" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#
+>%%AuxiG*(,(*&%#muG\"\"\"-%$expG6#*&,,*(%$x_PGF)-F+6#,$*&%(sigma_mGF)%
+\"tGF)!\"\"F)^#F)F)F)*(F5F)%'lambdaGF)F6F)F)*(F5F)F:F)%#dtGF)F)*&^#F7F
+)F0F)F)*&F>F)%#dxGF)F)F)F:F7F)F)*&F(F)-F+6#*&,,F/F)F9F)F;F)F=F)*&F@F)F
+8F)F)F)F:F7F)F)**-F+6#**F0F)F:F7F1F)F8F)F)--F+6#F46#,$*(,&*$)F@\"\"#F)
+F7*(FTF)F(F)F<F)F)F)F<F7F@F7F7F)--F+6#*(F>F)F0F)F:F7FNF)F@F)F)FTF<FTF@
+!\"%" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "8 0 0" 67 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
